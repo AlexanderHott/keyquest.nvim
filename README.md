@@ -1,5 +1,7 @@
 # keyquest.nvim
 
+![A demo of keyquest](./keyquest.png)
+
 ## Setup
 
 Using lazy
