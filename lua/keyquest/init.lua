@@ -46,7 +46,6 @@ function M.register_quests()
 			-- keymap is one set by lua
 			local existing_keymap = keymaps[quest.mode][quest_keymap]
 			vim.keymap.set(quest.mode, quest.keymap, function()
-				vim.print("quest " .. quest.keymap)
 				if quest.amount_curr < quest.amount_goal then
 					quest.amount_curr = quest.amount_curr + 1
 				end
@@ -61,7 +60,6 @@ function M.register_quests()
 		else
 			-- keymap is builtin to nvim
 			vim.keymap.set(quest.mode, quest.keymap, function()
-				vim.print("quest-raw " .. quest.keymap)
 				if quest.amount_curr < quest.amount_goal then
 					quest.amount_curr = quest.amount_curr + 1
 				end
